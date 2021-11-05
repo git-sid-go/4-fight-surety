@@ -1,33 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Flight Surety</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>FlightSurety</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-
-<body>
-
+  <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">FlightSurety</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <a class="navbar-brand" href="#">Flight Surety</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </nav>
-
     <main class="container">
+      <section>
+        <div id="display-wrapper" class="top-20"></div>
+        <h4>Register airline</h4>
+        <div class="top-20">
+          <h5>Airline accounts to be registered</h5>
+        </div>
+        <select id="selectAirline"></select>
+        <div class="top-20">
+          <h5>Authorized accounts</h5>
+        </div>
+        <select id="selectAccount"></select>
+        <div class="top-20">
+          <h5>Registered airlines</h5>
+        </div>
+        <ul id="registeredAirline"></ul>
+        <div id="display-wrapper-airlines"></div>
+        <btn class="btn btn-primary" id="register-airline"
+          >Register airline</btn
+        >
+      </section>
 
+      <section>
         <div id="display-wrapper" class="top-20">
+          <h4>Fund airline</h4>
+          <btn class="btn btn-primary" id="populate-registered"
+            >Get registered airlines</btn
+          >
         </div>
-        <div class="row top-20">
-            <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+        <div class="top-20">
+          <h6>Select airline to fund</h6>
+          <select id="populateRegistered"></select>
         </div>
+        <div class="top-20">
+          <h6>Fund airlne 10 ETH</h6>
+          <btn class="btn btn-primary" id="fund-airline">Fund airline</btn>
+        </div>
+        <div class="top-20">
+          <btn class="btn btn-primary" id="populate-funded"
+            >Get funded airlines</btn
+          >
+          <select id="populateFunded"></select>
+        </div>
+      </section>
+
+      <section>
+        <div id="display-wrapper" class="top-20"></div>
+        <h4>Buy flight insurance</h4>
+        <select id="populateFlights"></select>
+        <div class="flight-time">Flight time:</div>
+        <div class="flight-airline">Flight airline:</div>
+        <btn class="btn btn-primary" id="register-flight">Register flight</btn>
+        <h6>Select passenger and amount to buy insurance</h6>
+        <select id="passengerList"></select>
+        <h6>Insurance amount (ETH)</h6>
+        <input type="text" id="insurance-amount" />
+        <btn class="btn btn-primary" id="buy-insurance"
+          >Buy flight insurance</btn
+        >
+        <btn class="btn btn-primary" id="submit-oracles"
+          >Submit update to oracles</btn
+        >
+      </section>
+
+      <section>
+        <h4>Claim insurance</h4>
+        <h6>Select passenger account</h6>
+        <select id="passengerList2"></select>
+        <div class="account-balance">Account balance:</div>
+        <div id="display-credit" class="top-20"></div>
+        <btn class="btn btn-primary" id="check-balance">Check balance</btn>
+        <div id="display-balance" class="top-20"></div>
+        <btn class="btn btn-primary" id="withdraw-credits"
+          >Withdraw credits</btn
+        >
+      </section>
     </main>
-
-</body>
-
+  </body>
 </html>
